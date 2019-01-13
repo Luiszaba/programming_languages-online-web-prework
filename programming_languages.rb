@@ -1,7 +1,7 @@
 def reformat_languages(c_langs)
   lang_hash = Hash.new(0)
   c_langs.each do |style, lang_names|
-    c_langs.each do |name, lang_type|
+    lang_names.each do |name, lang_type|
       if lang_hash.has_key?(name)
         lang_hash[name][:style] << style 
       else
@@ -12,4 +12,3 @@ def reformat_languages(c_langs)
   end
   lang_hash
 end
-
