@@ -1,11 +1,11 @@
-def reformat_languages(languages)
+def reformat_languages(c_langs)
   lang_hash = Hash.new(0)
-  languages.each do |style, language_names|
-    language_names.each do |name, language_type|
+  c_langs.each do |style, lang_names|
+    language_names.each do |name, lang_type|
       if lang_hash.has_key?(name)
         lang_hash[name][:style] << style 
       else
-        lang_hash[name] = language_type
+        lang_hash[name] = lang_type
         lang_hash[name][:style] = [style]
       end 
     end
